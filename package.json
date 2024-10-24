@@ -11,7 +11,7 @@
     "typescript": "^5.0.0"
   },
   "exports": {
-    ".": "./src/mod.ts",
+    ".": "./mod.ts",
     "./tryCatch": "./src/tryCatch.ts",
     "./patternMatch": "./patternMatch.ts"
   }
