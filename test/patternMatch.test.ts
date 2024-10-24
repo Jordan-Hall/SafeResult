@@ -28,7 +28,7 @@ interface Order {
   };
 }
 
-describe('SafeResult Pattern Matching', () => {
+describe('typeguard Pattern Matching', () => {
   
   // Ok and Err constructors
   test('Ok constructor should create a successful Result', () => {

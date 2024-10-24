@@ -7,7 +7,7 @@ interface ValidationError {
   message: string;
 }
 
-describe('SafeResult Try/Catch Utilities', () => {
+describe('typeguard Try/Catch Utilities', () => {
   
   // Custom error classes for testing
   class CustomError extends Error {}
