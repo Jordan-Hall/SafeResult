@@ -1,7 +1,7 @@
 {
   "name": "@jordan-hall/typeguard",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/jordan-hall/TypeGuard.git"
