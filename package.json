@@ -1,6 +1,11 @@
 {
-  "name": "typeguard",
+  "name": "@jordan-hall/typeguard",
   "type": "module",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordan-hall/TypeGuard.git"
+  },
   "scripts": {
     "test": "bun test"
   },
@@ -11,8 +16,13 @@
     "typescript": "^5.0.0"
   },
   "exports": {
-    ".": "./mod.ts",
-    "./tryCatch": "./src/tryCatch.ts",
-    "./patternMatch": "./patternMatch.ts"
-  }
+    ".": "./dist/mod.js",
+    "./tryCatch": "./dist/src/tryCatch.js",
+    "./patternMatch": "./dist/src/patternMatch.js"
+  },
+  "files": [
+    "README.md",
+    "license",
+    "dist/"
+  ]
 }

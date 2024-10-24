@@ -1,5 +1,5 @@
 
-# typeguard
+# @jordan-hall/typeguard
 
 A TypeScript library providing type-safe handling of `Result` types, pattern matching, and robust error handling utilities. Designed to enhance code reliability and readability by leveraging TypeScript's powerful type system.
 
@@ -27,26 +27,32 @@ A TypeScript library providing type-safe handling of `Result` types, pattern mat
 
 ## Installation (coming soon JSR)
 
-You can install `typeguard` via npm or yarn:
+You can install `@jordan-hall/typeguard` via Pacakage Json:
 
 ```bash
 
 ### Using Bun
-bun install typeguard
+bun install @jordan-hall/typeguard
 
 ### Using npm
-npm install typeguard
+npm install @jordan-hall/typeguard
 
 ### Using yarn
-yarn add typeguard
+yarn add @jordan-hall/typeguard
 
 ### Using pnpm
-pnpm install typeguard
+pnpm install @jordan-hall/typeguard
+```
 
+You can also use JSR (preferred). For import symbol view on [JSR website](https://jsr.io/@jordanhall/@jordan-hall/typeguard)
+
+```bash
 ### Using Deno
-deno add jsr:@jordan-hall/typeguard
+deno add jsr:@jordan-hall/@jordan-hall/typeguard
 
-
+### Using NPM
+npx jsr add @jordanhall/@jordan-hall/typeguard
+```
 
 ## Usage
 
@@ -55,7 +61,7 @@ deno add jsr:@jordan-hall/typeguard
 `Result<T, E>` represents either a successful computation `Ok<T>` or a failed computation `Err<E>`.
 
 ```typescript
-import { Ok, Err, Result } from 'typeguard';
+import { Ok, Err, Result } from '@jordan-hall/typeguard';
 
 type User = { id: number; name: string };
 type ValidationError = { field: string; message: string };
@@ -69,7 +75,7 @@ const failure: Result<User, ValidationError> = Err({ field: "email", message: "I
 Perform pattern matching on `Result` types for expressive and type-safe error handling.
 
 ```typescript
-import { match, when, _, Result } from 'typeguard';
+import { match, when, _, Result } from '@jordan-hall/typeguard';
 
 function getUser(id: number): Result<User, ValidationError> {
   if (id === 0) return Err({ field: "id", message: "Invalid user ID" });
@@ -91,7 +97,7 @@ console.log(message); // Output: User ID: 1, Name: Alice
 Utilize type guards, predicates, and array patterns for complex matching scenarios.
 
 ```typescript
-import { match, when, guard, some, every, _ } from 'typeguard';
+import { match, when, guard, some, every, _ } from '@jordan-hall/typeguard';
 
 interface Order {
   id: string;
@@ -126,7 +132,7 @@ Simplify error handling with type-safe `tryCatch` and `tryCatchAsync` functions.
 #### Synchronous `tryCatch`
 
 ```typescript
-import { tryCatch } from 'typeguard/tryCatch';
+import { tryCatch } from '@jordan-hall/typeguard/tryCatch';
 
 const [error, result] = tryCatch(() => JSON.parse('{"key": "value"}'));
 
@@ -140,7 +146,7 @@ if (result)) {
 #### Asynchronous `tryCatchAsync`
 
 ```typescript
-import { tryCatchAsyn } from 'typeguard/tryCatch';
+import { tryCatchAsyn } from '@jordan-hall/typeguard/tryCatch';
 
 async function fetchData(): Promise<string> {
   // Simulate fetching data
@@ -163,7 +169,7 @@ if (data) {
 Create custom patterns using predicates and type guards.
 
 ```typescript
-import { when, guard, match, _, Result } from 'typeguard';
+import { when, guard, match, _, Result } from '@jordan-hall/typeguard';
 
 interface Admin {
   role: 'admin';
@@ -190,7 +196,7 @@ console.log(userMessage); // Output: User: Bob, Age: 25
 Match arrays with `some` or `every` patterns.
 
 ```typescript
-import { some, every, when, match, _ } from 'typeguard';
+import { some, every, when, match, _ } from '@jordan-hall/typeguard';
 
 type Data = number[];
 
@@ -322,7 +328,7 @@ const every = <T>(pattern: Pattern<T>): Many<T> => ({
 ### 1. Type-Based Pattern Matching with `Result`
 
 ```typescript
-import { Ok, Err, Result, match, when } from 'typeguard';
+import { Ok, Err, Result, match, when } from '@jordan-hall/typeguard';
 
 /**
  * Performs division and returns a Result type.
@@ -356,7 +362,7 @@ console.log(message2); // Output: Caught error: Division by zero
 ```
 
 ```typescript
-import { Ok, Err, Result, match, when } from 'typeguard';
+import { Ok, Err, Result, match, when } from '@jordan-hall/typeguard';
 
 interface Payment {
   method: "credit_card" | "paypal" | "bank_transfer";
@@ -410,7 +416,7 @@ console.log(paymentMessage); // Output: Large payment of $100
 ### 5. Error Handling with `match`
 
 ```typescript
-import { Ok, Err, Result, match, when } from 'typeguard';
+import { Ok, Err, Result, match, when } from '@jordan-hall/typeguard';
 
 interface FileData {
   filename: string;
@@ -452,7 +458,7 @@ console.log(fileMessage); // Output: File "data.txt" loaded with content: Sample
 ### 6. Using Selector Functions in Path-Based Matching
 
 ```typescript
-import { Ok, Err, Result, match, when } from 'typeguard';
+import { Ok, Err, Result, match, when } from '@jordan-hall/typeguard';
 
 interface Employee {
   name: string;
