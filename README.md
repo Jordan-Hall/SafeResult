@@ -14,8 +14,6 @@ A TypeScript library providing type-safe handling of `Result` types, pattern mat
   - [Utility Functions](#utility-functions)
 - [API Reference](#api-reference)
 - [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -44,7 +42,7 @@ yarn add @jordan-hall/typeguard
 pnpm install @jordan-hall/typeguard
 ```
 
-You can also use JSR (preferred). For import symbol view on [JSR website](https://jsr.io/@jordanhall/@jordan-hall/typeguard)
+You can also use JSR (preferred). For import symbol view on [JSR website](https://jsr.io/@jordanhall/typeguard)
 
 ```bash
 ### Using Deno
